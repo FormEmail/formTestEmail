@@ -1,0 +1,5 @@
+com\form\formTest\EmailService.class
+com\form\formTest\FormTestApplication.class
+com\form\formTest\HomeController.class
+com\form\formTest\ContactoController.class
+com\form\formTest\config\WebConfig.class
