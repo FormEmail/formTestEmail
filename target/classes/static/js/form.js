@@ -1,10 +1,13 @@
-document.getElementById("contactForm").addEventListener("submit", function (e) {
+document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const formData = {
-    nombre: document.getElementById("nombre").value,
+    name: document.getElementById("full-name").value,
+    phone: document.getElementById("phone").value,
     email: document.getElementById("email").value,
-    mensaje: document.getElementById("mensaje").value
+    proyectNumber: document.getElementById("order-number").value,
+    reason: document.getElementById("dropdownOptions").value,
+    message: document.getElementById("message").value
   };
 
   fetch("/api/contacto", {
