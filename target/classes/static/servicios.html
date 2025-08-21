@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ready Innova - Nuestros Servicios</title>
+    <meta
+      name="description"
+      content="Ready Innova: Descubre nuestros servicios. Automatización, IA, Reporting y Diagnóstico Digital"
+    />
+    <!-- LINK CANONICAL -->
+    <link rel="canonical" href="https://readyinnova.com/servicios/" />
+
+    <link
+      rel="icon"
+      href="images/logos/favicon.png"
+      type="image/png"
+      sizes="16x16 32x32"
+    />
+    <link
+      rel="shortcut icon"
+      href="images/logos/favicon.png"
+      type="image/png"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ready Innova - Nuestros Servicios" />
+    <meta
+      property="og:description"
+      content="Explora nuestros servicios de Automatización, IA, Visualización de datos y Diagnóstico Digital"
+    />
+    <meta property="og:url" content="https://readyinnova.com/servicios/" />
+    <meta
+      property="og:image"
+      content="https://readyinnova.com/images/logos/preview.png"
+    />
+    <meta property="og:site_name" content="Ready Innova" />
+
+    <!-- Info Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ready Innova - Nuestros Servicios" />
+    <meta
+      name="twitter:description"
+      content="Explora nuestros servicios de Automatización, IA, Visualización de datos y Diagnóstico Digital"
+    />
+    <meta
+      name="twitter:image"
+      content="https://readyinnova.com/images/logos/preview.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="relative min-h-screen bg-black overflow-x-hidden">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 z-50 p-4">
+      <button
+        id="menu-button"
+        onclick="toggleSidebar()"
+        class="fixed top-4 left-4 z-50 p-3 flex flex-col justify-between w-12 h-12 bg-transparent border border-transparent rounded-full transition-all duration-300 ease-in-out backdrop-blur-md"
+      >
+        <span class="block w-full h-1.5 bg-gray-700 rounded"></span>
+        <span class="block w-full h-1.5 bg-gray-700 rounded"></span>
+        <span class="block w-full h-1.5 bg-gray-700 rounded"></span>
+      </button>
+    </header>
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"
+      onclick="toggleSidebar()"
+    ></div>
+    <!-- Sidebar -->
+    <div
+      id="sidebar"
+      class="fixed top-0 left-0 w-70 h-full bg-gradient-to-b from-gray-900 via-slate-800 to-black shadow-lg transform -translate-x-full z-40"
+    >
+      <div class="text-center mt-10">
+        <button
+          onclick="toggleSidebar()"
+          class="inline-flex items-center space-x-2 hover:text-gray-200"
+        >
+          <span class="text-5xl md:text-3lg leading-none text-red-500 mr-3"
+            >✖︎</span
+          >
+          <span class="text-lg text-gray-400">Cerrar</span>
+        </button>
+      </div>
+      <div class="w-40 h-px bg-white mx-auto my-6"></div>
+      <nav class="p-6 h-full flex flex-col justify-between">
+        <div class="space-y-1">
+          <a
+            href="/"
+            class="relative block w-full text-lg text-gray-300 px-4 py-2 rounded transition-colors duration-200 before:absolute before:left-0 before:right-0 before:top-0 before:h-[2px] before:bg-gray-500 before:scale-x-0 before:origin-center before:transition-transform before:duration-300 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-gray-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:before:scale-x-100 hover:after:scale-x-100"
+          >
+            Inicio
+          </a>
+          <!-- Opción activa: Servicios -->
+          <a
+            href="servicios.html"
+            class="relative block w-full text-lg text-gray-900 bg-zinc-400 font-semibold px-4 py-2 rounded transition-colors duration-200 before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px] before:bg-zinc-800 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-zinc-800"
+          >
+            Servicios
+          </a>
+          <a
+            href="quienes_somos.html"
+            class="relative block w-full text-lg text-gray-300 px-4 py-2 rounded transition-colors duration-200 before:absolute before:left-0 before:right-0 before:top-0 before:h-[2px] before:bg-gray-500 before:scale-x-0 before:origin-center before:transition-transform before:duration-300 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-gray-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:before:scale-x-100 hover:after:scale-x-100"
+          >
+            Quiénes somos
+          </a>
+          <a
+            href="preguntas_frecuentes.html"
+            class="relative block w-full text-lg text-gray-300 px-4 py-2 rounded transition-colors duration-200 before:absolute before:left-0 before:right-0 before:top-0 before:h-[2px] before:bg-gray-500 before:scale-x-0 before:origin-center before:transition-transform before:duration-300 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-gray-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:before:scale-x-100 hover:after:scale-x-100"
+          >
+            Preguntas frecuentes - FAQ
+          </a>
+          <a
+            href="contacto.html"
+            class="relative block w-full text-lg text-gray-300 px-4 py-2 rounded transition-colors duration-200 before:absolute before:left-0 before:right-0 before:top-0 before:h-[2px] before:bg-gray-500 before:scale-x-0 before:origin-center before:transition-transform before:duration-300 after:absolute after:left-0 after:right-0 after:bottom-0 after:h-[2px] after:bg-gray-500 after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:before:scale-x-100 hover:after:scale-x-100"
+          >
+            Contacto
+          </a>
+
+          <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+            <img
+              src="images/logos/Logo-S_nobackground.png"
+              alt="Logo de la empresa"
+              class="h-24 w-auto"
+            />
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Contenido principal -->
+    <!-- Imágenes flotantes -->
+
+    <div
+      class="absolute inset-x-0 top-0 h-screen overflow-hidden z-0 pointer-events-none"
+    >
+      <!-- Imagen 1 -->
+      <img
+        src="images/services/blur_img1.png"
+        alt="imagen cabecera con movimiento y blur 1"
+        class="absolute top-5 left-20 w-80 md:w-[1000px] h-auto rounded-xl shadow-2xl blur-sm hover:blur-none transition duration-700 ease-in-out animate-[float_6s_ease-in-out_infinite]"
+      />
+
+      <!-- Imagen 2 -->
+      <img
+        src="images/services/blur_img2.png"
+        alt="imagen cabecera con movimiento y blur 2"
+        class="absolute top-48 right-32 w-120 md:w-[850px] rounded-xl shadow-xl blur-sm hover:blur-none transition duration-700 ease-in-out animate-[float2_5s_ease-in-out_infinite]"
+      />
+
+      <!-- Imagen 3-->
+      <img
+        src="images/services/blur_img3.png"
+        alt="imagen cabecera con movimiento y blur 3"
+        class="absolute top-2/3 md:top-1/3 left-1/3 w-96 md:w-[900px] rounded-xl shadow-lg blur-sm hover:blur-none transition duration-700 ease-in-out animate-[float3_14s_ease-in-out_infinite]"
+      />
+    </div>
+
+    <!-- Contenido central -->
+    <main
+      class="relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-4"
+    >
+      <!-- Parte 1 del título -->
+      <h1
+        class="text-7xl md:text-[150px] font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg leading-none max-w-4xl"
+      >
+        Nuestros
+      </h1>
+
+      <!-- Parte 2 del título -->
+      <h1
+        class="text-7xl md:text-[150px] font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg leading-none max-w-4xl"
+      >
+        Servicios
+      </h1>
+    </main>
+
+    <!-- Botones-->
+    <section class="bg-black text-white py-16">
+      <div class="w-full h-[200px] bg-black"></div>
+    </section>
+
+    <section class="bg-black text-white py-16">
+      <div
+        class="container mx-auto flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-6 md:gap-10"
+      >
+        <!-- Botón 1-->
+        <button
+          id="btn-automatizacion"
+          class="group opacity-0 blur-sm reveal-btn relative w-48 min-h-56 px-6 py-3 md:px-10 md:py-6 bg-[rgb(0,34,77)] text-zinc-300 md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-500 hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center"
+        >
+          <div class="text-4xl mb-2">🚀</div>
+          <div>Automatización y Productividad</div>
+
+          <!-- Subtexto aparece al hacer hover -->
+          <div
+            class="mt-auto text-sm text-white lg:text-gray-600 opacity-100 translate-y-0 transition-all duration-300 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"
+          >
+            Desarrollo de soluciones a tu medida
+          </div>
+        </button>
+        <!-- Botón 2-->
+        <button
+          id="btn-IA"
+          class="group opacity-0 blur-sm reveal-btn relative w-48 min-h-56 px-6 py-3 md:px-10 md:py-6 bg-[rgb(93,14,65)] text-zinc-300 md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-500 hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center"
+        >
+          <div class="text-4xl mb-2">🤖</div>
+          <div>Business Intelligence</div>
+
+          <!-- Subtexto que aparece con hover -->
+          <div
+            class="mt-auto text-sm text-white lg:text-gray-600 opacity-100 translate-y-0 transition-all duration-300 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"
+          >
+            IA aplicada al crecimiento empresarial
+          </div>
+        </button>
+        <!-- Botón 3-->
+        <button
+          id="btn-reporting"
+          class="group opacity-0 blur-sm reveal-btn relative w-48 min-h-56 px-6 py-3 md:px-10 md:py-6 bg-[rgb(160,21,62)] text-zinc-300 md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-500 hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center"
+        >
+          <div class="text-4xl mb-2">📊</div>
+          <div>Visualización de datos - Reporting</div>
+
+          <!-- Subtexto que aparece con hover -->
+          <div
+            class="mt-auto text-sm text-white lg:text-gray-600 opacity-100 translate-y-0 transition-all duration-300 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"
+          >
+            Visualiza tus datos fácilmente
+          </div>
+        </button>
+        <!-- Botón 4-->
+        <button
+          id="btn-diagnostico"
+          class="group opacity-0 blur-sm reveal-btn relative w-48 min-h-56 px-6 py-3 md:px-10 md:py-6 bg-[rgb(255,32,78)] text-zinc-300 md:text-white hover:text-black font-semibold rounded-lg shadow-lg transition-all duration-500 hover:bg-gray-200 hover:shadow-2xl hover:scale-105 flex flex-col justify-start items-center text-center"
+        >
+          <div class="text-4xl mb-2">📝</div>
+          <div>Diagnóstico Digital y Plan de Acción</div>
+
+          <!-- Subtexto al hacer hover -->
+          <div
+            class="mt-auto text-sm text-white lg:text-gray-600 opacity-100 translate-y-0 transition-all duration-300 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"
+          >
+            Evalúa y mejora tu empresa
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <div class="h-16 bg-gradient-to-b from-black to-[rgb(0,34,77)]"></div>
+
+    <!-- Sección de Automatización y Productividad-->
+    <section id="automatizacion" class="bg-[rgb(0,34,77)] py-12">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-5xl leading-tight font-bold text-center mb-8 bg-gradient-to-r from-indigo-400 via-blue-200 to-purple-700 bg-clip-text text-transparent"
+        >
+          Automatización y Productividad
+        </h2>
+
+        <div class="flex justify-center mb-8">
+          <img
+            src="images/services/service1.png"
+            alt="Automatizacion y productividad"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl"
+          />
+        </div>
+
+        <p class="text-center text-fuchsia-200 mb-8 text-lg font-bold">
+          Descubre todo lo que podemos ofrecerte para impulsar tu negocio al
+          siguiente nivel
+        </p>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center group lg:group-hover:overflow-visible"
+        >
+          <!-- O365 -->
+          <div
+            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 lg:hover:scale-150 lg:hover:z-10 max-w-xs md:max-w-lg"
+          >
+            <img
+              src="images/services/cat1_serv1.png"
+              alt="automatizacion Servicio 1"
+              class="w-full h-48 object-cover transition-all duration-300 lg:group-hover:h-72"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Implantación y Optimización de Microsoft 365
+              </h3>
+              <h4 class="text-sm text-indigo-400 mb-3">
+                Moderniza tu forma de trabajar
+              </h4>
+              <p class="text-gray-300 text-sm">
+                Configuración de cuentas, organización de usuarios, permisos y
+                protección. Almacenamiento en la nube y copias de seguridad. Ten
+                todos tus archivos y procesos en un mismo sistema.
+              </p>
+              <p class="text-red-400 text-sm mt-5">
+                Mejora la seguridad y el control de tu empresa. Trabaja desde
+                cualquier sitio, sin complicaciones.
+              </p>
+            </div>
+          </div>
+          <!-- Soluciones -->
+          <div
+            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 lg:hover:scale-150 lg:hover:z-10 max-w-xs md:max-w-lg"
+          >
+            <img
+              src="images/services/cat1_serv2.png"
+              alt="automatizacion Servicio 2"
+              class="w-full h-48 object-cover transition-all duration-300 lg:group-hover:h-72"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Desarrollo de Aplicaciones
+              </h3>
+              <h4 class="text-sm text-indigo-400 mb-3">
+                Soluciones completas y automatizaciones personalizadas que se
+                adaptan exactamente a cómo trabaja tu empresa
+              </h4>
+              <p class="text-gray-300 text-sm">
+                Migración de Excel a Apps centralizadas y seguras.
+                Digitalización de formularios en papel. Registro de incidencias.
+                Soluciones de contabilidad. Registros de vacaciones con
+                calendarios actualizados y exportables
+              </p>
+              <p class="text-red-400 text-sm mt-5">
+                Ahorra tiempo, reduce errores y aumenta el control.
+              </p>
+            </div>
+          </div>
+          <!-- Automatizacion -->
+          <div
+            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 lg:hover:scale-150 lg:hover:z-10 max-w-xs md:max-w-lg"
+          >
+            <img
+              src="images/services/cat1_serv3.png"
+              alt="automatizacion Servicio 3"
+              class="w-full h-48 object-cover transition-all duration-300 lg:group-hover:h-72"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Automatización de Tareas
+              </h3>
+              <h4 class="text-sm text-indigo-400 mb-3">
+                Elimina pasos manuales, reduce errores y gana tiempo: deja que
+                tus procesos se hagan solos
+              </h4>
+              <p class="text-gray-300 text-sm">
+                Envío de correos automáticos. Recordatorios y notificaciones
+                basadas en tus datos. Generación de documentos y archivos
+                automatizados.
+              </p>
+              <p class="text-red-400 text-sm mt-5">
+                Reduce los errores operativos automatizando tareas recurrentes.
+              </p>
+            </div>
+          </div>
+          <!-- Alertas -->
+          <div
+            class="bg-gradient-to-br from-blue-950 to-indigo-900 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 lg:hover:scale-150 lg:hover:z-10 max-w-xs md:max-w-lg"
+          >
+            <img
+              src="images/services/cat1_serv4.png"
+              alt="automatizacion Servicio 4"
+              class="w-full h-48 object-cover transition-all duration-300 lg:group-hover:h-72"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Sistemas de Alertas
+              </h3>
+              <h4 class="text-sm text-indigo-400 mb-3">
+                Recibe avisos automáticos cuando algo importante ocurra (o esté
+                a punto de ocurrir) en tu negocio
+              </h4>
+              <p class="text-gray-300 text-sm">
+                Gestión de inventario - evita roturas de stock -. Alertas de
+                dirección y operativa. Control de Clientes. Seguimiento de
+                incidencias sin resolver.
+              </p>
+              <p class="text-red-400 text-sm mt-5">
+                Recibe información clave en el momento justo. Detecta problemas
+                antes de que crezcan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="h-16 bg-gradient-to-b from-[rgb(0,34,77)] to-[rgb(93,14,65)]"
+    ></div>
+
+    <!-- Sección de IA-->
+    <section id="IA" class="bg-[rgb(93,14,65)] py-12">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-5xl leading-tight font-bold text-center mb-8 bg-gradient-to-r from-rose-400 via-fuchsia-400 to-indigo-600 bg-clip-text text-transparent"
+        >
+          Business Intelligence
+        </h2>
+        <div class="flex justify-center mb-8">
+          <img
+            src="images/services/service2.png"
+            alt="IA"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl"
+          />
+        </div>
+        <p class="text-center text-fuchsia-200 mb-8 text-lg font-bold">
+          Descubre como la IA puede ayudarte a tomar decisiones más precisas y
+          hacer tu negocio más autónomo y eficiente
+        </p>
+        <div
+          class="grid grid-cols-1 gap-8 justify-items-center overflow-visible"
+        >
+          <!-- IA -->
+          <div
+            class="group lg:group-hover:overflow-visible bg-gradient-to-br from-indigo-800 to-grey-800 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 lg:hover:scale-150 lg:hover:z-10 flex flex-col max-w-xs md:max-w-lg"
+          >
+            <img
+              src="images/services/cat2_serv1.png"
+              alt="IA Servicio 1"
+              class="w-full h-48 object-cover transition-all duration-300 lg:group-hover:h-72"
+              style="object-position: 50% 20%"
+            />
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-xl font-semibold text-white mb-2">
+                IA, Machine Learning y Deep Learning
+              </h3>
+              <h4 class="text-sm text-indigo-400 mb-3">
+                Predice, segmenta y decide mejor con soluciones de IA adaptadas
+                a empresas reales como la tuya
+              </h4>
+              <p class="text-gray-300 text-sm flex-1">
+                Creación de modelos de inteligencia artificial adaptados a tus
+                necesidades.
+              </p>
+              <p class="text-gray-300 text-sm flex-1">
+                Sistemas de clasificación para agrupar automaticamente a tus
+                clientes, productos, incidencias... según patrones ocultos a
+                simple vista. Segmenta de manera inteligente tu negocio.
+              </p>
+              <p class="text-gray-300 text-sm flex-1">
+                Modelos de proyecciones para estimar la demanda futura, ventas,
+                riesgos de impago o mantenimiento predictivo.
+              </p>
+              <p class="text-red-400 text-sm mt-5">
+                Aumenta tu ventaja competitiva y reduce costes. Toma tus
+                decisiones basándote en datos, no en intuiciones.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="h-16 bg-gradient-to-b from-[rgb(93,14,65)] to-[rgb(160,21,62)]"
+    ></div>
+
+    <!-- Sección de Reporting-->
+    <section id="reporting" class="bg-[rgb(160,21,62)] py-12">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-5xl leading-tight font-bold text-center mb-8 bg-gradient-to-r from-indigo-700 via-fuchsia-400 to-blue-700 bg-clip-text text-transparent"
+        >
+          Visualización de datos - Reporting
+        </h2>
+        <div class="flex justify-center mb-8">
+          <img
+            src="images/services/service3.png"
+            alt="Reporting"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl"
+          />
+        </div>
+        <p class="text-center text-fuchsia-200 mb-8 text-lg font-bold">
+          Tus números, en tiempo real
+        </p>
+        <div class="grid grid-cols-1 gap-8 justify-items-center">
+          <!-- Reporting -->
+          <div
+            class="group lg:group-hover:overflow-visible bg-gradient-to-br from-indigo-800 to-pink-950 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 lg:hover:scale-150 lg:hover:z-10 flex flex-col max-w-xs md:max-w-lg"
+          >
+            <img
+              src="images/services/cat3_serv1.png"
+              alt="Reporting Servicio 1"
+              class="w-full h-48 object-cover object-top transition-all duration-300 lg:group-hover:h-72"
+            />
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Visualización de datos - Cuadro de Mandos
+              </h3>
+              <h4 class="text-sm text-indigo-400 mb-3">
+                Transforma datos en claridad: reportes automatizados, visuales y
+                a tu medida
+              </h4>
+              <p class="text-gray-300 text-sm flex-1">
+                Centraliza y comprende toda la información clave de tu negocio
+                en un solo lugar. Nuestros sistemas de reporting permiten crear
+                dashboards personalizados que integran métricas de ventas,
+                productividad, clientes, inventario, finanzas, incidencias,
+                tiempos de respuesta, rendimiento por equipo o empleado, y mucho
+                más. Todo desde una interfaz visual, intuitiva y accesible desde
+                cualquier dispositivo.
+              </p>
+              <p class="text-red-400 text-sm mt-5">
+                Controla tu información sin depender de terceros ni esperas.
+                Toma decisiones basándote en tu información a tiempo real.
+                Profesionaliza la gestión y presenta resultados claros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="h-16 bg-gradient-to-b from-[rgb(160,21,62)] to-[rgb(255,32,78,0.6)]"
+    ></div>
+
+    <!-- Sección de Diagnostico Digital-->
+    <section id="diagnostico" class="bg-[rgb(255,32,78,0.6)] py-12">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-5xl leading-tight font-bold text-center mb-8 bg-gradient-to-r from-indigo-800 via-pink-500 to-violet-500 bg-clip-text text-transparent"
+        >
+          Diagnóstico Digital y Plan de acción
+        </h2>
+        <div class="flex justify-center mb-8">
+          <img
+            src="images/services/service4.png"
+            alt="Diagnostico"
+            class="w-full max-w-md sm:max-w-lg md:max-w-4xl aspect-video object-cover rounded-2xl shadow-2xl"
+          />
+        </div>
+        <p class="text-center text-fuchsia-200 mb-8 text-lg font-bold">
+          ¿No sabes por dónde empezar? Nosotros analizamos tu empresa y te
+          decimos qué procesos puedes mejorar, automatizar o digitalizar. Paso a
+          paso, y adaptado a tu realidad.
+        </p>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center group lg:group-hover:overflow-visible"
+        >
+          <!-- Evaluacion -->
+          <div
+            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 lg:hover:scale-150 lg:hover:z-10 max-w-xs md:max-w-lg"
+          >
+            <img
+              src="images/services/cat4_serv1.png"
+              alt="Diagnostico Servicio 1"
+              class="w-full h-48 object-cover object-top transition-all duration-300 lg:group-hover:h-72"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Evaluación de negocio y Mapa de oportunidades
+              </h3>
+              <h4 class="text-sm text-indigo-400 mb-3">
+                Analizamos tu empresa y te ofrecemos varias opciones de
+                digitalizacion
+              </h4>
+              <p class="text-gray-300 text-sm">
+                Servicio de diagnóstico en el que analizamos cómo funciona tu
+                empresa hoy (procesos, herramientas, tareas repetitivas, uso de
+                datos...) y te entregamos un informe práctico con oportunidades
+                concretas de mejora, usando tecnologías actuales y en la nube.
+              </p>
+              <p class="text-red-400 text-sm mt-5">
+                Visión clara y realista, sin palabras técnicas. Aclara qué hacer
+                primero y cuánto puede costar. Identifica tareas que te hacen
+                perder tiempo y afectan a tus ganancias.
+              </p>
+            </div>
+          </div>
+          <!-- Formaciones -->
+          <div
+            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 lg:hover:scale-150 lg:hover:z-10 max-w-xs md:max-w-lg"
+          >
+            <img
+              src="images/services/cat4_serv2.png"
+              alt="Diagnostico Servicio 2"
+              class="w-full h-48 object-cover transition-all duration-300 lg:group-hover:h-72"
+              style="object-position: 50% 20%"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Formaciones de digitalización para tu empresa
+              </h3>
+              <h4 class="text-sm text-indigo-400 mb-3">
+                Capacita a tu equipo con herramientas digitales que realmente
+                marcan la diferencia
+              </h4>
+              <p class="text-gray-300 text-sm">
+                Ofrecemos formaciones prácticas y accesibles en Microsoft 365,
+                Power Apps, Power BI y uso de inteligencia artificial aplicada a
+                pequeñas y medianas empresas. Tus empleados aprenderán a
+                utilizar estas herramientas para ser más eficientes, ahorrar
+                tiempo y tomar mejores decisiones. Nos enfocamos en ejemplos
+                reales y necesidades concretas de tu empresa, sin tecnicismos
+                innecesarios.
+              </p>
+              <p class="text-red-400 text-sm mt-5">
+                Capacita al equipo sin depender de expertos externos. Mejora la
+                productividad y reduce errores.
+              </p>
+            </div>
+          </div>
+          <!-- Soporte -->
+          <div
+            class="bg-gradient-to-br from-indigo-600 to-red-950 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 lg:hover:scale-150 lg:hover:z-10 max-w-xs md:max-w-lg"
+          >
+            <img
+              src="images/services/cat4_serv3.png"
+              alt="catchup_Servicio 3"
+              class="w-full h-48 object-cover transition-all duration-300 lg:group-hover:h-72"
+              style="object-position: 50% 20%"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Servicio de Soporte y Mejora Continua
+              </h3>
+              <h4 class="text-sm text-indigo-400 mb-3">
+                Te acompañamos después de la implementación, para que saques el
+                máximo provecho a tu solución
+              </h4>
+              <p class="text-gray-300 text-sm">
+                Te guiamos para que aproveches todas las funcionalidades de la
+                herramienta implementada, resolvemos tus dudas y ofrecemos
+                soporte sobre su funcionamiento. Porque implementar una solución
+                es solo el primer paso: lo importante es que realmente funcione
+                para ti.
+              </p>
+              <p class="text-red-400 text-sm mt-5">
+                Estamos para ayudarte a crecer con lo que ya has construido.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-56 bg-gradient-to-b from-[rgb(255,32,78,0.6)] to-black"></div>
+
+    <!--Footer-->
+    <footer class="bg-black text-black">
+      <div class="w-full h-[3px] bg-black"></div>
+      <div class="w-full mx-auto text-center">
+        <!-- Contenedor blanco para el texto principal -->
+        <div class="bg-white p-8 shadow-lg">
+          <div class="flex justify-center items-center bg-white">
+            <img
+              src="images/logos/Logo-XL_v2.png"
+              alt="Logotipo de la empresa"
+              class="h-36 w-auto justify-center"
+            />
+          </div>
+          <h2 class="text-lg md:text-3xl font-semibold leading-relaxed">
+            ¿Listo para descubrir cómo la tecnología puede ayudarte a trabajar
+            mejor cada día?
+          </h2>
+          <div class="mb-10"></div>
+          <!-- Botón de contacto -->
+          <a
+            href="contacto.html"
+            class="bg-white text-black font-semibold px-10 py-3 rounded-full hover:bg-gradient-to-r from-gray-800 via-indigo-900 to-black hover:text-white transition duration-300 border-2 border-black"
+          >
+            Contáctenos
+          </a>
+        </div>
+
+        <!-- Sección negra con enlaces responsive -->
+        <div class="bg-black text-white py-6">
+          <div class="max-w-4xl mx-auto">
+            <nav aria-label="Enlaces secundarios">
+              <ul
+                class="grid grid-cols-2 gap-4 text-center text-sm sm:flex sm:flex-wrap sm:justify-center sm:items-center sm:space-x-2 sm:text-base"
+              >
+                <li class="flex items-center justify-center">
+                  <a
+                    href="/"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    Inicio
+                  </a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <a
+                    href="servicios.html"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    Servicios
+                  </a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <a
+                    href="quienes_somos.html"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    ¿Quiénes somos?
+                  </a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <a
+                    href="preguntas_frecuentes.html"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    Preguntas frecuentes
+                  </a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <a
+                    href="contacto.html"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    Contacto
+                  </a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <a
+                    href="privacy.html"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    Política de Privacidad
+                  </a>
+                </li>
+                <li class="flex items-center justify-center">
+                  <a
+                    href="aviso_legal.html"
+                    class="block w-full py-2 hover:underline"
+                  >
+                    Aviso Legal
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Sección negra con botón y redes sociales -->
+        <div
+          class="bg-black text-white flex flex-col items-center space-y-6 pb-10 mt-2"
+        >
+          <!-- Redes sociales -->
+          <div class="flex space-x-6">
+            <a
+              href="https://instagram.com/tu_negocio"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <svg
+                class="w-6 h-6 fill-current text-white bg-gradient-to-r from-orange-400 via-pink-500 to-purple-700 lg:bg-none lg:hover:bg-gradient-to-r from-orange-400 via-pink-500 to-purple-700 transition"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2.2c3.2 0 3.6 0 4.8.1 1.1.1 1.8.2 2.3.5.6.3 1.1.7 1.5 1.5.3.5.5 1.2.5 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.1-.2 1.8-.5 2.3-.3.6-.7 1.1-1.5 1.5-.5.3-1.2.5-2.3.5-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.1-.1-1.8-.2-2.3-.5-.6-.3-1.1-.7-1.5-1.5-.3-.5-.5-1.2-.5-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.1.2-1.8.5-2.3.3-.6.7-1.1 1.5-1.5.5-.3 1.2-.5 2.3-.5C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7.1.1c-1.3.1-2.3.3-3.2.7C2.5 1.3 1.7 2.1 1.1 3.2.7 4.1.5 5.1.4 6.4.3 7.6.3 8 0 12c.3 4 .3 4.4.4 5.6.1 1.3.3 2.3.7 3.2.6 1.1 1.4 1.9 2.5 2.5.9.4 1.9.6 3.2.7 1.2.1 1.6.1 5.6.1s4.4 0 5.6-.1c1.3-.1 2.3-.3 3.2-.7 1.1-.6 1.9-1.4 2.5-2.5.4-.9.6-1.9.7-3.2.1-1.2.1-1.6.1-5.6s0-4.4-.1-5.6c-.1-1.3-.3-2.3-.7-3.2-.6-1.1-1.4-1.9-2.5-2.5-.9-.4-1.9-.6-3.2-.7C15.7 0 15.3 0 12 0z"
+                />
+                <path
+                  d="M12 5.8A6.2 6.2 0 1 0 18.2 12 6.2 6.2 0 0 0 12 5.8zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.7a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://linkedin.com/in/tu_negocio"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <svg
+                class="w-6 h-6 fill-current text-white bg-gradient-to-r from-sky-300 to-blue-600 lg:bg-none lg:hover:bg-gradient-to-r from-sky-300 to-blue-600 transition"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.025-3.037-1.849-3.037-1.851 0-2.135 1.444-2.135 2.939v5.667H9.355V9h3.414v1.561h.048c.476-.899 1.637-1.848 3.37-1.848 3.602 0 4.267 2.37 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.985 20.452H3.685V9h3.3z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="js/scripts_services.js"></script>
+  </body>
+</html>
